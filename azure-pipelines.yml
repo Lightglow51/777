@@ -1,0 +1,16 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    sudo apt-get install julia
+    julia -e 'using Pkg; Pkg.add(["Flux", "CSV", "JLD2", "DataFrames", "Plots"])'
+  displayName: 'Install Julia and dependencies'
+
+- script: |
+    julia train.jl
+    julia test.jl
+  displayName: 'Train network'
