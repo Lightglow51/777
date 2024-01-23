@@ -1,0 +1,7 @@
+pool:
+  name: Test
+
+steps:
+- script:
+    julia test.jl
+  displayName: 'Test network'

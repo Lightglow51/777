@@ -1,0 +1,7 @@
+pool:
+  name: Test
+
+steps:
+- script:
+    julia train.jl
+  displayName: 'Train network'
