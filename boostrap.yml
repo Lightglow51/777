@@ -2,7 +2,6 @@ pool:
   name: Test
 
 steps:
-- script: |
-    sudo apt-get install julia
+- script:
     julia -e 'using Pkg; Pkg.add(["Flux", "CSV", "JLD2", "DataFrames", "Plots"])'
   displayName: 'Install Julia and dependencies'
