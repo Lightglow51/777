@@ -5,3 +5,8 @@ steps:
 - script:
     julia train.jl
   displayName: 'Train network'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'trained'
+    artifactName: 'test'
