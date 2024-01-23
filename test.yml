@@ -5,3 +5,8 @@ steps:
 - script:
     julia test.jl
   displayName: 'Test network'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'losses.csv'
+    artifactName: 'losses'
